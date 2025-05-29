@@ -1,73 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Vinto</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Platform</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="createPostModal" class="modal hidden">
-  <div class="modal-content">
-    <span class="close-btn" onclick="toggleModal()">&times;</span>
-    <h2>Create New Post</h2>
-    <div class="modal-body">
-      <div class="left">
-        <img id="mainPreview" src="assets/sample1.jpg" alt="Preview">
-        <div class="thumbnail-row">
-          <img src="assets/sample1.jpg" onclick="setMainImage(this.src)" />
-          <img src="assets/sample2.jpg" onclick="setMainImage(this.src)" />
-          <img src="assets/sample3.jpg" onclick="setMainImage(this.src)" />
-        </div>
-      </div>
-      <div class="right">
-        <textarea id="caption" maxlength="200" oninput="updateCharCount()"
-          placeholder="Checkout my pics from my trip!!!"></textarea>
-        <div class="char-count"><span id="charCount">0</span>/200</div>
-        <input type="text" placeholder="Add a location (optional)">
-        <input type="text" placeholder="Add Tagged people (optional)">
-        <div class="buttons">
-          <button onclick="toggleModal()">Cancel</button>
-          <button class="share-btn">Share</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  <header>
+    <h1>SocialApp</h1>
+    <nav>
+      <ul class="nav-bar">
+        <li data-section="home" class="active">Home</li>
+        <li data-section="explore">Explore</li>
+        <li data-section="create">Create</li>
+        <li data-section="notifications">Notifications</li>
+        <li data-section="saved">Saved</li>
+        <li data-section="profile">Profile</li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-    <aside class="sidebar">
-      <div class="logo">📷 <strong>Vinto</strong></div>
-      <nav>
-        <a class="active"><i>🏠</i> Home</a>
-        <a><i>🧭</i> Explore</a>
-        <a onclick="toggleModal()"><i>➕</i> Create</a>
-        <a><i>🔔</i> Notifications</a>
-        <a><i>🔖</i> Saved</a>
-      </nav>
-      <div class="bottom">
-        <button class="logout">LogOut</button>
-        <span>cps530finalproj</span>
-      </div>
-    </aside>
+  <main>
+    <section id="home" class="content-section active">
+      <h2>Home Feed</h2>
+      <div id="home-posts"></div>
+    </section>
 
-    <main class="upload-area">
-      <div class="upload-box">
-        <div class="icon">🖼️ 🎥</div>
-        <p>Drag Photos and videos here</p>
-        <button class="select-btn">Select image(s)</button>
-      </div>
-    </main>
+    <section id="explore" class="content-section">
+      <h2>Explore</h2>
+      <div id="explore-posts"></div>
+    </section>
 
-    <header class="topbar">
-      <input type="text" class="search" placeholder="Search" />
-      <div class="icons">
-        <span>👥</span>
-        <img src="assets/profile.jpg" alt="User" class="avatar" />
+    <section id="create" class="content-section">
+      <h2>Create New Post</h2>
+      <div class="create-upload">
+        <input type="file" id="uploadInput" accept="image/*" />
+        <textarea id="newPostText" placeholder="Write something cool..."></textarea>
+        <button onclick="addNewPost()">Post</button>
+        <div id="previewArea"></div>
       </div>
-    </header>
-  </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <section id="notifications" class="content-section">
+      <h2>Notifications</h2>
+      <div id="notifications-list"></div>
+    </section>
+
+    <section id="saved" class="
 
