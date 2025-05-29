@@ -1,55 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Social Media Platform</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>Vinto</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>SocialApp</h1>
-    <nav>
-      <ul class="nav-bar">
-        <li data-section="home" class="active">Home</li>
-        <li data-section="notifications">Notifications</li>
-        <li data-section="saved">Saved</li>
-        <li data-section="profile">Profile</li>
-      </ul>
-    </nav>
-  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">📷 <strong>Vinto</strong></div>
+      <nav>
+        <a class="active"><i>🏠</i> Home</a>
+        <a><i>🧭</i> Explore</a>
+        <a><i>➕</i> Create</a>
+        <a><i>🔔</i> Notifications</a>
+        <a><i>🔖</i> Saved</a>
+      </nav>
+      <div class="bottom">
+        <button class="logout">LogOut</button>
+        <span>cps530finalproj</span>
+      </div>
+    </aside>
 
-  <main>
-    <section id="home" class="content-section active">
-      <h2>Home Feed</h2>
-      <!-- Placeholder for dynamic posts -->
-      <div class="post">Post 1</div>
-      <div class="post">Post 2</div>
-    </section>
+    <main class="upload-area">
+      <div class="upload-box">
+        <div class="icon">🖼️ 🎥</div>
+        <p>Drag Photos and videos here</p>
+        <button class="select-btn">Select image(s)</button>
+      </div>
+    </main>
 
-    <section id="notifications" class="content-section">
-      <h2>Notifications</h2>
-      <!-- Placeholder for dynamic notifications -->
-      <div class="notification">You have a new follower!</div>
-      <div class="notification">Your post was liked!</div>
-    </section>
-
-    <section id="saved" class="content-section">
-      <h2>Saved Items</h2>
-      <!-- Placeholder for saved content -->
-      <div class="saved-item">Saved Post 1</div>
-      <div class="saved-item">Saved Post 2</div>
-    </section>
-
-    <section id="profile" class="content-section">
-      <h2>User Profile</h2>
-      <!-- Placeholder for user information -->
-      <p>Name: John Doe</p>
-      <p>Posts: 10</p>
-      <p>Followers: 150</p>
-    </section>
-  </main>
+    <header class="topbar">
+      <input type="text" class="search" placeholder="Search" />
+      <div class="icons">
+        <span>👥</span>
+        <img src="assets/profile.jpg" alt="User" class="avatar" />
+      </div>
+    </header>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
