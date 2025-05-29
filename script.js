@@ -4,3 +4,16 @@ document.querySelectorAll('.sidebar nav a').forEach(navItem => {
     navItem.classList.add('active');
   });
 });
+
+function toggleModal() {
+  document.getElementById('createPostModal').classList.toggle('hidden');
+}
+
+function updateCharCount() {
+  const caption = document.getElementById('caption');
+  document.getElementById('charCount').innerText = caption.value.length;
+}
+
+function setMainImage(src) {
+  document.getElementById('mainPreview').src = src;
+}
