@@ -150,9 +150,7 @@ function loadSavedPosts() {
     postDiv.textContent = post.content;
     savedPostsContainer.appendChild(postDiv);
   });
-}
 
-function updateProfile() {
-  const postCount = samplePosts.length;
-  document.getElementById('post-count').textContent = postCount;
-}
+::contentReference[oaicite:0]{index=0}
+ 
+
