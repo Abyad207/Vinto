@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Social Media Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SocialApp</h1>
+    <nav>
+      <ul class="nav-bar">
+        <li data-section="home" class="active">Home</li>
+        <li data-section="notifications">Notifications</li>
+        <li data-section="saved">Saved</li>
+        <li data-section="profile">Profile</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="content-section active">
+      <h2>Home Feed</h2>
+      <!-- Placeholder for dynamic posts -->
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+    </section>
+
+    <section id="notifications" class="content-section">
+      <h2>Notifications</h2>
+      <!-- Placeholder for dynamic notifications -->
+      <div class="notification">You have a new follower!</div>
+      <div class="notification">Your post was liked!</div>
+    </section>
+
+    <section id="saved" class="content-section">
+      <h2>Saved Items</h2>
+      <!-- Placeholder for saved content -->
+      <div class="saved-item">Saved Post 1</div>
+      <div class="saved-item">Saved Post 2</div>
+    </section>
+
+    <section id="profile" class="content-section">
+      <h2>User Profile</h2>
+      <!-- Placeholder for user information -->
+      <p>Name: John Doe</p>
+      <p>Posts: 10</p>
+      <p>Followers: 150</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
