@@ -6,6 +6,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="createPostModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" onclick="toggleModal()">&times;</span>
+    <h2>Create New Post</h2>
+    <div class="modal-body">
+      <div class="left">
+        <img id="mainPreview" src="assets/sample1.jpg" alt="Preview">
+        <div class="thumbnail-row">
+          <img src="assets/sample1.jpg" onclick="setMainImage(this.src)" />
+          <img src="assets/sample2.jpg" onclick="setMainImage(this.src)" />
+          <img src="assets/sample3.jpg" onclick="setMainImage(this.src)" />
+        </div>
+      </div>
+      <div class="right">
+        <textarea id="caption" maxlength="200" oninput="updateCharCount()"
+          placeholder="Checkout my pics from my trip!!!"></textarea>
+        <div class="char-count"><span id="charCount">0</span>/200</div>
+        <input type="text" placeholder="Add a location (optional)">
+        <input type="text" placeholder="Add Tagged people (optional)">
+        <div class="buttons">
+          <button onclick="toggleModal()">Cancel</button>
+          <button class="share-btn">Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="container">
     <aside class="sidebar">
       <div class="logo">📷 <strong>Vinto</strong></div>
